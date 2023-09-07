@@ -76,6 +76,8 @@ struct NaturalNumber {
     int Multiply(int x, int y) {
         if (x < 0 || y < 0) {
             return -1;
+        } else if (x == 0 || y == 0) {
+            return 0;
         } else if (INT_MAX / x >= y) {
             return x * y;
         } else {
